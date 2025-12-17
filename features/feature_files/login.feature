@@ -6,7 +6,7 @@ Feature: Login
     And Click login
     Then I should be taken to the homepage
 
-  Scenario: Login with valid credentials
+  Scenario: Login with invalid credentials
     Given I am on the login page
     When I input invalid credentials
     And Click login
