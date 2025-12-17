@@ -9,9 +9,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'cucumber --format html --out report.json'
+                sh 'cucumber --format json --out report.json'
             }
-        }
         }
     }
 }
