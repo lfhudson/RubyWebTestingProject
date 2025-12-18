@@ -4,15 +4,13 @@ pipeline {
     stages {
         stage('Set-up') {
             steps {
-                sh 'bundle install'
+                bat 'bundle install'
             }
         }
         stage('Test') {
             steps {
-                sh 'cucumber --format html --out report.html'
-                sh 'cucumber --format json --out report.json'
+                bat 'cucumber --format json --out report.json'
             }
-        }
         }
     }
 }
