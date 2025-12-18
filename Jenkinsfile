@@ -4,12 +4,13 @@ pipeline {
     stages {
         stage('Set-up') {
             steps {
-                sh 'bundle install'
+                bat 'cd RubyWebTestingProject'
+                //bat 'bundle install'
             }
         }
         stage('Test') {
             steps {
-                sh 'cucumber --format json --out report.json'
+                bat 'cucumber --format json --out report.json'
             }
         }
     }
