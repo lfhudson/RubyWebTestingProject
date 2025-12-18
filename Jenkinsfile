@@ -1,13 +1,13 @@
 
 pipeline {
+    environment {
+                    PATH = "C:\\WINDOWS\\SYSTEM32;%PATH%"
+                    }
     agent any
 
     stages {
         stage('Set-up') {
             steps {
-                environment {
-                    @PATH = "C:\\WINDOWS\\SYSTEM32;%PATH%"
-                    }
                 bat 'bundle install'
             }
         }
