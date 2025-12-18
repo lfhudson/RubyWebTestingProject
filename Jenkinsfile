@@ -10,7 +10,8 @@ pipeline {
         // }
         stage('Test') {
             steps {
-                bat 'cucumber-api-steps'
+                bat 'cucumber -p ci'
+                cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'logs', sortingMethod: 'ALPHABETICAL'
             }
         }
     }
