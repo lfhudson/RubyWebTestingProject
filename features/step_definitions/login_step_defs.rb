@@ -27,3 +27,11 @@ end
 Then("I should see an error message") do
     expect(page).to have_content('Login Failed')
 end
+
+When("I click logout") do
+   find(:xpath, '/html/body/app-root/app-home/section/div/div[1]/div[2]/app-cartvalue/button[2]/span/i').click
+end
+
+Then("I should be taken to the login page") do
+    expect(page).to have_current_path('https://letcode.in/login')
+end
