@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Set-up') {
             steps {
-                environment {
+                @environment {
                     PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Ruby34-x64\\bin"
                     }
                 bat 'bundle install'
