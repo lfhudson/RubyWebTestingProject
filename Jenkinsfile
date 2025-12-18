@@ -2,14 +2,13 @@ pipeline {
     agent any
     environment {
 
-    PATH = "C:\\WINDOWS\\SYSTEM32"
+    PATH = "C:\\WINDOWS\\SYSTEM32;%PATH%"
 
 }
 
     stages {
         stage('Set-up') {
             steps {
-                bat 'gem install bundler'
                 bat 'bundle install'
             }
         }
