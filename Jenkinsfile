@@ -1,10 +1,11 @@
-pipeline {
-    agent any
     environment {
 
     PATH = "C:\\WINDOWS\\SYSTEM32;%PATH%"
 
 }
+
+pipeline {
+    agent any
 
     stages {
         stage('Set-up') {
