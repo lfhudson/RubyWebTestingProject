@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Set-up') {
             steps {
-                bat 'gem install bundler'
                 bat 'bundle install'
             }
         }
