@@ -5,13 +5,10 @@ pipeline {
     stages {
         stage('Set-up') {
             environment {
+                    PATH = "C:\\WINDOWS\\SYSTEM32"
                     PATH+RUBY = 'C:\\Ruby33-x64\\bin'
                     }
             steps {
-                bat 'ruby -v'
-                bat 'gem -v'
-                bat 'gem install bundler'
-                bat 'bundle -v'
                 bat 'bundle install'
             }
         }
