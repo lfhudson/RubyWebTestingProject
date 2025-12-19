@@ -1,5 +1,3 @@
-
-
 Given("I am on the login page") do
   visit('https://letcode.in/login')
   #click_button('Consent')
@@ -7,7 +5,7 @@ Given("I am on the login page") do
 end
 
 When("I input valid credentials") do
-   find(:xpath, '/html/body/app-root/app-login/section/div/div[1]/div[2]/div/div[1]/div/input').fill_in(:with => 'mor_2314')
+   find(:xpath, '/html/body/app-root/app-login/section/div/div[1]/div[2]/div/div[1]/div/input').fill_in( :with => 'mor_2314')
    find(:xpath, '/html/body/app-root/app-login/section/div/div[1]/div[2]/div/div[2]/div/input').fill_in( :with => '83r5^_')
 end
 
